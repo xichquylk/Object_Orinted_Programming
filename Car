@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+class Car {
+    private:
+        string company;
+        string model;
+        int year;
+    public:
+        Car() {
+            company = "";
+            model = "";
+            year = 2020;
+        }
+        
+        /*Car(string comp, string model, int year) {
+            company = comp;
+            model = model;
+            year = year;
+        }*/
+        
+        Car(string comp, string model, int year): company(comp), model(model), year(year) {};
+        
+        void setCompany(string comp) {
+            company = comp;
+        }
+        
+        void setModel(string mod) {
+            model = mod;
+        }
+        
+        void setYear(int y) {
+            year = y;
+        }
+        
+        string getCompany() {
+            return company;
+        }
+        
+        string getModel() {
+            return model;
+        }
+        
+        int getYear() {
+            return year;
+        }
+};
+
+int main()
+{
+    Car car;
+    car.setCompany("Toyota");
+    car.setModel("Vios");
+    car.setYear(2023);
+    
+    cout << "Company: " << car.getCompany() << endl;
+    cout << "Name: " << car.getModel() << endl;
+    cout << "Year: " << car.getYear() << endl;
+
+    return 0;
+}
